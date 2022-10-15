@@ -29,7 +29,7 @@ var SubtitlesOctopus = function (options) {
     self.availableFonts = options.availableFonts || []; // Object with all available fonts (optional). Key is font name in lower case, value is link: {"arial": "/font1.ttf"}
     self.onReadyEvent = options.onReady; // Function called when SubtitlesOctopus is ready (optional)
     if (supportsWebAssembly) {
-        self.workerUrl = options.workerUrl || 'subtitles-octopus-worker.js'; // Link to WebAssembly worker
+        self.workerUrl = options.workerUrl || 'https://libass.github.io/JavascriptSubtitlesOctopus/assets/js/subtitles-octopus-worker.js'; // Link to WebAssembly worker
     } else {
         self.workerUrl = options.legacyWorkerUrl || 'subtitles-octopus-worker-legacy.js'; // Link to legacy worker
     }
